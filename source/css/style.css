@@ -1,50 +1,84 @@
+:root {
+    --main-background: #dfdfdfdf;
+    --taskbar-background: rgba(0, 0, 0, 0.3);
+    --border-temp: red;
+    --menu-button-background: #000000;
+    --hidden-menu-background: rgba(0,0,0,0.6);
+    --menu-text: #cfcfcf;
+    --temp-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgb(60, 193, 131));
+    --icon-color: rgba(0,0,0, 0.5);
+}
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: #dfdfdfdf;
+    background-color: var(--main-background);
 }
 .taskbar {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--taskbar-background);
     height: 45px;
     display: flex;
     flex-direction: row;
 }
 .dropdown {
-    width: 7rem;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid var(--border-temp);
 }
 #menu-button {
-    background-color: #000000;
+    background-color: var(--menu-button-background);
     width: 70%;
     height: 75%;
 }
 .hidden-menu {
     display: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--hidden-menu-background);
 }
 .hidden-menu ul {
     display: flex;
     flex-direction: column;
 }
 .hidden-menu li {
-    padding: 0.5rem;
-    border: 1px solid #ffffff;
+    padding: 5px;
+    border: 1px solid var(--border-temp);
     list-style-type: none;
 }
 .menu-option {
-    color: #cfcfcf;
+    font-size: 20px;
+    color: var(--menu-text);
     text-decoration: none;
-    font-size: 1.3rem;
-    border: 1px solid green;  
+    border: 1px solid var(--border-temp);  
+}
+.box {
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+.flex-box {
+    display: flex;
+    flex-flow: row balance;
+    align-content: start;
+    overflow: hidden;
 }
 .dashboard-box {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(45, 70, 20));
-    height: 600px;
-    margin: 10px 20px;
-    border-radius: 10px;
+    padding: 10px 0px;
+    height: 650px;
+    background-image: var(--temp-image);
+}
+.widget-box {
+    height: 200px;
+    background-image: var(--temp-image);
+}
+.icon {
+    height: 100px;
+    /* width: 75px; */
+    background-color: var(--icon-color);
+    flex: 1 1 100px;
+}
+.widget {
+    height: 75px;
+    flex: 1 1 75px;
 }
