@@ -7,6 +7,7 @@
     --menu-text: #cfcfcf;
     --temp-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgb(60, 193, 131));
     --icon-color: rgba(0,0,0, 0.5);
+    --button-color: rgba(150,150,50, 0.5);
 }
 * {
     box-sizing: border-box;
@@ -21,22 +22,32 @@ body {
     height: 45px;
     display: flex;
     flex-direction: row;
+    position: static;
 }
 .dropdown {
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--border-temp);
+    /* border: 1px solid var(--border-temp); */
 }
 #menu-button {
     background-color: var(--menu-button-background);
     width: 70%;
     height: 75%;
 }
+#home-button {
+    background-color: var(--menu-button-background);
+    height: 33.750px;
+    width: 60px;
+    position: fixed;
+    right: 10px;
+}
 .hidden-menu {
     display: none;
     background-color: var(--hidden-menu-background);
+    position: fixed;
+    top: 45px;
 }
 .hidden-menu ul {
     display: flex;
@@ -44,14 +55,14 @@ body {
 }
 .hidden-menu li {
     padding: 5px;
-    border: 1px solid var(--border-temp);
+    /* border: 1px solid var(--border-temp); */
     list-style-type: none;
 }
 .menu-option {
     font-size: 20px;
     color: var(--menu-text);
     text-decoration: none;
-    border: 1px solid var(--border-temp);  
+    /* border: 1px solid var(--border-temp); */
 }
 .box {
     border-radius: 10px;
@@ -63,12 +74,12 @@ body {
     align-content: start;
     overflow: hidden;
 }
-.dashboard-box {
+#dashboard-box {
     padding: 10px 0px;
     height: 650px;
     background-image: var(--temp-image);
 }
-.widget-box {
+#widget-box {
     height: 200px;
     background-image: var(--temp-image);
 }
@@ -81,4 +92,11 @@ body {
 .widget {
     height: 75px;
     flex: 1 1 75px;
+}
+#create {
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    justify-self: center;
 }
